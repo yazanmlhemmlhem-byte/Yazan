@@ -24,9 +24,15 @@
             --radius: 20px;
         }
 
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        *, *::before, *::after { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
 
-        html { scroll-behavior: smooth; }
+        html { 
+            scroll-behavior: smooth; 
+        }
 
         body {
             font-family: 'Cairo', sans-serif;
@@ -37,9 +43,18 @@
         }
 
         /* ======= SCROLL BAR ======= */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: var(--primary-dark); }
-        ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+        ::-webkit-scrollbar { 
+            width: 6px; 
+        }
+        
+        ::-webkit-scrollbar-track { 
+            background: var(--primary-dark); 
+        }
+        
+        ::-webkit-scrollbar-thumb { 
+            background: var(--gold); 
+            border-radius: 3px; 
+        }
 
         /* ======= NAVBAR ======= */
         nav {
@@ -95,7 +110,8 @@
             border: 1px solid transparent;
         }
 
-        .nav-link:hover, .nav-link.active {
+        .nav-link:hover, 
+        .nav-link.active {
             background: var(--gold-dim);
             border-color: var(--gold);
             color: var(--gold);
@@ -183,8 +199,14 @@
         }
 
         @keyframes expandW {
-            from { width: 0; opacity: 0; }
-            to { width: 120px; opacity: 1; }
+            from { 
+                width: 0; 
+                opacity: 0; 
+            }
+            to { 
+                width: 120px; 
+                opacity: 1; 
+            }
         }
 
         header p {
@@ -257,7 +279,7 @@
             border-bottom: 1px solid #eee;
             padding: 1.2rem 2rem;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1rem;
             max-width: 900px;
             margin: 0 auto;
@@ -273,7 +295,13 @@
             border-left: 1px solid #eee;
         }
 
-        .stat-item:last-child { border-left: none; }
+        .stat-item:first-child { 
+            border-left: none; 
+        }
+
+        .stat-item:last-child { 
+            border-left: none; 
+        }
 
         .stat-num {
             font-size: 1.6rem;
@@ -282,7 +310,9 @@
             line-height: 1;
         }
 
-        .stat-num span { color: var(--gold); }
+        .stat-num span { 
+            color: var(--gold); 
+        }
 
         .stat-label {
             font-size: 0.8rem;
@@ -351,7 +381,9 @@
         }
 
         /* ======= ITINERARY ======= */
-        .itinerary { margin-top: 2rem; }
+        .itinerary { 
+            margin-top: 2rem; 
+        }
 
         .day-block {
             margin-bottom: 3.5rem;
@@ -373,8 +405,13 @@
             box-shadow: 0 0 0 3px var(--primary-dark);
         }
 
-        .day-block:nth-child(2) { border-right-color: var(--gold); }
-        .day-block:nth-child(2)::before { background: var(--primary-dark); }
+        .day-block:nth-child(2) { 
+            border-right-color: var(--gold); 
+        }
+        
+        .day-block:nth-child(2)::before { 
+            background: var(--primary-dark); 
+        }
 
         .day-num {
             background: linear-gradient(135deg, var(--primary-dark), var(--primary-mid));
@@ -401,7 +438,9 @@
             transition: background 0.2s;
         }
 
-        .slot:hover { background: #f8f9f7; }
+        .slot:hover { 
+            background: #f8f9f7; 
+        }
 
         .slot-time {
             font-weight: 700;
@@ -411,13 +450,19 @@
             border-left: 2px solid #eee;
         }
 
-        .slot-content { font-size: 1rem; color: var(--text-mid); }
-        .slot-content b { color: var(--primary-dark); }
+        .slot-content { 
+            font-size: 1rem; 
+            color: var(--text-mid); 
+        }
+        
+        .slot-content b { 
+            color: var(--primary-dark); 
+        }
 
         /* ======= CARDS ======= */
         .info-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
             margin-top: 3rem;
         }
@@ -496,7 +541,9 @@
             transition: transform 0.3s ease;
         }
 
-        .card-light:hover { transform: translateY(-6px); }
+        .card-light:hover { 
+            transform: translateY(-6px); 
+        }
 
         .card-light h3 {
             color: var(--primary-dark);
@@ -506,10 +553,12 @@
         }
 
         /* ======= SPECS LIST ======= */
-        .specs-list { list-style: none; }
+        .specs-list { 
+            list-style: none; 
+        }
 
         .specs-list li {
-            padding: 10px 0 10px 0;
+            padding: 10px 0;
             position: relative;
             font-size: 0.97rem;
             color: var(--text-mid);
@@ -519,7 +568,9 @@
             gap: 10px;
         }
 
-      .specs-list li:last-child { border-bottom: none; }
+        .specs-list li:last-child { 
+            border-bottom: none; 
+        }
 
         .specs-list li::before {
             content: '✓';
@@ -530,7 +581,9 @@
             margin-top: 1px;
         }
 
-        .specs-list li b { color: var(--primary-dark); }
+        .specs-list li b { 
+            color: var(--primary-dark); 
+        }
 
         /* ======= COMMUNITY SECTION ======= */
         .community-grid {
@@ -549,9 +602,13 @@
             transition: transform 0.3s;
         }
 
-        .community-card:nth-child(2) { border-top-color: var(--success); }
+        .community-card:nth-child(2) { 
+            border-top-color: var(--success); 
+        }
 
-        .community-card:hover { transform: translateY(-6px); }
+        .community-card:hover { 
+            transform: translateY(-6px); 
+        }
 
         .community-card h3 {
             color: var(--primary-dark);
@@ -563,11 +620,19 @@
             gap: 8px;
         }
 
-        .community-card h3 i { color: var(--gold); }
+        .community-card h3 i { 
+            color: var(--gold); 
+        }
 
-        .community-card:nth-child(2) h3 i { color: var(--success); }
+        .community-card:nth-child(2) h3 i { 
+            color: var(--success); 
+        }
 
-        .community-card p { font-size: 0.95rem; color: #666; margin-bottom: 1rem; }
+        .community-card p { 
+            font-size: 0.95rem; 
+            color: #666; 
+            margin-bottom: 1rem; 
+        }
 
         /* ======= APP SECTION ======= */
         .app-section {
@@ -620,8 +685,14 @@
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(200,164,90,0.3); }
-            50% { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(200,164,90,0); }
+            0%, 100% { 
+                transform: scale(1); 
+                box-shadow: 0 0 0 0 rgba(200,164,90,0.3); 
+            }
+            50% { 
+                transform: scale(1.05); 
+                box-shadow: 0 0 0 12px rgba(200,164,90,0); 
+            }
         }
 
         .app-content h3 {
@@ -644,7 +715,9 @@
             gap: 8px;
         }
 
-        .app-features li i { color: var(--gold); }
+        .app-features li i { 
+            color: var(--gold); 
+        }
 
         /* ======= BOOKING FORM ======= */
         .booking-section {
@@ -677,9 +750,14 @@
             margin-bottom: 0.25rem;
         }
 
-        .booking-header p { color: rgba(255,255,255,0.75); font-size: 0.95rem; }
+        .booking-header p { 
+            color: rgba(255,255,255,0.75); 
+            font-size: 0.95rem; 
+        }
 
-        .booking-body { padding: 2.5rem; }
+        .booking-body { 
+            padding: 2.5rem; 
+        }
 
         .form-section {
             margin-bottom: 2rem;
@@ -687,7 +765,10 @@
             border-bottom: 1px solid #eee;
         }
 
-        .form-section:last-of-type { border-bottom: none; margin-bottom: 0; }
+        .form-section:last-of-type { 
+            border-bottom: none; 
+            margin-bottom: 0; 
+        }
 
         .form-section-title {
             display: flex;
@@ -699,9 +780,13 @@
             margin-bottom: 1.2rem;
         }
 
-        .form-section-title i { color: var(--gold); }
+        .form-section-title i { 
+            color: var(--gold); 
+        }
 
-        .form-group { margin-bottom: 1.2rem; }
+        .form-group { 
+            margin-bottom: 1.2rem; 
+        }
 
         .form-group label {
             display: block;
@@ -771,6 +856,12 @@
             gap: 1rem;
         }
 
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Price Summary */
         .price-summary {
             background: linear-gradient(135deg, var(--primary-dark), var(--primary-mid));
@@ -797,9 +888,21 @@
             color: var(--gold);
         }
 
-        .price-row i { margin-left: 6px; color: var(--gold); font-size: 0.9rem; }
-        .price-row strong { font-weight: 600; }
-        .price-row:last-child strong { color: var(--gold); font-weight: 900; font-size: 1.3rem; }
+        .price-row i { 
+            margin-left: 6px; 
+            color: var(--gold); 
+            font-size: 0.9rem; 
+        }
+        
+        .price-row strong { 
+            font-weight: 600; 
+        }
+        
+        .price-row:last-child strong { 
+            color: var(--gold); 
+            font-weight: 900; 
+            font-size: 1.3rem; 
+        }
 
         /* Terms */
         .terms-box {
@@ -840,7 +943,7 @@
             width: 100%;
             background: linear-gradient(135deg, var(--primary-dark), var(--primary-mid));
             color: white;
-            border: none;
+            border: 1px solid rgba(200,164,90,0.3);
             padding: 1rem 2rem;
             border-radius: 12px;
             font-family: 'Cairo', sans-serif;
@@ -853,7 +956,6 @@
             justify-content: center;
             gap: 10px;
             box-shadow: 0 6px 20px rgba(11,35,24,0.25);
-            border: 1px solid rgba(200,164,90,0.3);
         }
 
         .submit-btn:hover {
@@ -862,9 +964,13 @@
             background: linear-gradient(135deg, #0d2a1c, #1a4a30);
         }
 
-        .submit-btn:active { transform: translateY(0); }
+        .submit-btn:active { 
+            transform: translateY(0); 
+        }
 
-        .submit-btn i { color: var(--gold); }
+        .submit-btn i { 
+            color: var(--gold); 
+        }
 
         /* Error/Success messages */
         .field-error {
@@ -874,7 +980,9 @@
             display: none;
         }
 
-        .field-error.visible { display: block; }
+        .field-error.visible { 
+            display: block; 
+        }
 
         /* ======= FOOTER ======= */
         footer {
@@ -902,7 +1010,9 @@
             font-size: 0.95rem;
         }
 
-        footer p b { color: var(--gold); }
+        footer p b { 
+            color: var(--gold); 
+        }
 
         .footer-contact {
             margin: 1rem 0;
@@ -916,6 +1026,7 @@
             display: flex;
             gap: 12px;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         .social-btn {
@@ -967,7 +1078,9 @@
             opacity: 1;
         }
 
-        #toast i { color: var(--gold); }
+        #toast i { 
+            color: var(--gold); 
+        }
 
         /* ======= SCROLL TO TOP ======= */
         #scrollTop {
@@ -992,656 +1105,553 @@
             z-index: 999;
         }
 
-        #scrollTop.visible { opacity: 1; pointer-events: auto; }
-        #scrollTop:hover { transform: translateY(-3px); background: var(--gold); color: var(--primary-dark); }
+        #scrollTop.visible { 
+            opacity: 1; 
+            pointer-events: auto; 
+        }
+        
+        #scrollTop:hover { 
+            transform: translateY(-3px); 
+            background: var(--gold); 
+            color: var(--primary-dark); 
+        }
 
         /* ======= ANIMATIONS ======= */
         @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { 
+                opacity: 0; 
+                transform: translateY(-20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
         }
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(25px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
         }
 
         /* ======= RESPONSIVE ======= */
-        @media (max-width: 900px) {
-            .stats-bar { grid-template-columns: repeat(2, 1fr); }
-        }
-
         @media (max-width: 768px) {
-            .menu-icon { display: block; }
-
-            .nav-menu {
-                position: absolute;
-                top: 100%;
-                right: 0;
-                left: 0;
-                flex-direction: column;
-                background: var(--primary-dark);
-                border-top: 2px solid var(--gold-dim);
-                padding: 0.5rem 0;
-                display: none;
-                gap: 0;
+            nav {
+                padding: 1rem;
             }
 
-            .nav-menu.open { display: flex; }
-            .nav-link { padding: 0.9rem 1.5rem; border-radius: 0; font-size: 1rem; }
+            .nav-menu {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
 
-            .info-grid { grid-template-columns: 1fr; }
-            .form-row { grid-template-columns: 1fr; }
-            .slot { grid-template-columns: 90px 1fr; gap: 1rem; }
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-            header { background-attachment: scroll; min-height: 60vh; }
+            header {
+                min-height: 50vh;
+                padding: 2rem 1rem;
+            }
+
+            header h1 {
+                font-size: clamp(2rem, 6vw, 4rem);
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
         }
 
-        @media (max-width: 540px) {
-            .stats-bar { grid-template-columns: repeat(2, 1fr); border-radius: 0; }
-            .stat-item { border-left: none; border-bottom: 1px solid #eee; }
+        @media (max-width: 480px) {
+            :root {
+                --radius: 15px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            header {
+                min-height: 40vh;
+            }
+
+            .wrapper {
+                margin: 2rem 1rem;
+                padding: 1.5rem;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-body {
+                padding: 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: clamp(1.3rem, 3vw, 2rem);
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="nav-logo">
+            <span class="logo-text">أُفق</span>
+            <span class="logo-subtitle">Horizon</span>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> عن المشروع</a></li>
+            <li><a href="#itinerary" class="nav-link"><i class="fas fa-map"></i> البرنامج</a></li>
+            <li><a href="#pricing" class="nav-link"><i class="fas fa-tag"></i> الأسعار</a></li>
+            <li><a href="#booking" class="nav-link"><i class="fas fa-calendar"></i> الحجز</a></li>
+        </ul>
+        <button class="menu-icon"><i class="fas fa-bars"></i></button>
+    </nav>
 
-<!-- NAVBAR -->
-<nav id="navbar">
-    <a href="#home" class="nav-logo" aria-label="أُفق - الصفحة الرئيسية">
-        <span class="logo-text">أُفق</span>
-        <span class="logo-subtitle">HORIZON</span>
-    </a>
-    <ul class="nav-menu" id="navMenu" role="menubar">
-        <li class="nav-item" role="none">
-            <a href="#home" class="nav-link active" role="menuitem"><i class="fas fa-home" aria-hidden="true"></i> الرئيسية</a>
-        </li>
-        <li class="nav-item" role="none">
-            <a href="#itinerary" class="nav-link" role="menuitem"><i class="fas fa-map-location-dot" aria-hidden="true"></i> المسار</a>
-        </li>
-        <li class="nav-item" role="none">
-            <a href="#community" class="nav-link" role="menuitem"><i class="fas fa-users" aria-hidden="true"></i> المجتمع</a>
-        </li>
-        <li class="nav-item" role="none">
-            <a href="#booking" class="nav-link" role="menuitem"><i class="fas fa-calendar-check" aria-hidden="true"></i> احجز الآن</a>
-        </li>
-    </ul>
-    <button class="menu-icon" id="menuIcon" aria-label="فتح القائمة" aria-expanded="false" aria-controls="navMenu">
-        <i class="fas fa-bars" aria-hidden="true"></i>
-    </button>
-</nav>
+    <!-- Hero Header -->
+    <header>
+        <div class="hero-badge">
+            <i class="fas fa-leaf"></i> السياحة المستدامة 2026
+        </div>
+        <h1>مرحباً بك في <span>أُفق</span></h1>
+        <div class="hero-divider"></div>
+        <p>اكتشف معنا رحلة فريدة تجمع بين الجمال الطبيعي والسياحة المسؤولة</p>
+        <div class="hero-cta">
+            <a href="#booking" class="btn-primary"><i class="fas fa-check"></i> احجز الآن</a>
+            <a href="#about" class="btn-outline"><i class="fas fa-arrow-left"></i> تعرف أكثر</a>
+        </div>
+    </header>
 
-<!-- HERO -->
-<header id="home" role="banner">
-    <div class="hero-badge"><i class="fas fa-leaf" aria-hidden="true"></i> سياحة مستدامة 2026</div>
-    <h1>أُفق | <span>HORIZON</span></h1>
-    <div class="hero-divider" role="presentation"></div>
-    <p>المخطط التشغيلي واللوجستي لرحلة الدراجات الهوائية المستدامة في سورية</p>
-    <div class="hero-cta">
-        <a href="#booking" class="btn-primary"><i class="fas fa-calendar-check" aria-hidden="true"></i> احجز مقعدك</a>
-        <a href="#itinerary" class="btn-outline"><i class="fas fa-route" aria-hidden="true"></i> اكتشف المسار</a>
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stat-item">
+            <span class="stat-num">500<span>+</span></span>
+            <span class="stat-label">سائح سعيد</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num">50<span>+</span></span>
+            <span class="stat-label">وجهة سياحية</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num">15</span>
+            <span class="stat-label">سنة خبرة</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-num">98<span>%</span></span>
+            <span class="stat-label">رضا العملاء</span>
+        </div>
     </div>
-</header>
 
-<!-- STATS BAR -->
-<div class="stats-bar" role="region" aria-label="إحصائيات الرحلة">
-    <div class="stat-item">
-        <div class="stat-num">2<span>يوم</span></div>
-        <div class="stat-label">مدة الرحلة</div>
+    <!-- Main Wrapper -->
+    <div class="wrapper">
+        <!-- About Section -->
+        <section id="about">
+            <div class="section-header">
+                <span class="section-tag">عن المشروع</span>
+                <h2>رؤية أُفق</h2>
+                <p>نحن ملتزمون بتقديم تجربة سياحية فريدة تحترم البيئة والمجتمع المحلي</p>
+            </div>
+            <div style="background: #f5f7f4; padding: 2rem; border-radius: 15px; margin-top: 2rem;">
+                <p style="line-height: 2; color: #555;">
+                    مشروع أُفق هو منصة سياحة مستدامة تهدف إلى تطوير السياحة المسؤولة في الشرق الأوسط. 
+                    نعتقد أن السياحة يجب أن تكون وسيلة لتبادل الثقافات واحترام البيئة والمساهمة في تنمية المجتمعات المحلية.
+                </p>
+            </div>
+        </section>
+
+        <!-- Itinerary Section -->
+        <section id="itinerary" style="margin-top: 4rem;">
+            <div class="section-header">
+                <span class="section-tag">البرنامج</span>
+                <h2>برنامج رحلتك</h2>
+                <p>اكتشف تفاصيل رحلتك اليومية في هذا البرنامج الرائع</p>
+            </div>
+            <div class="itinerary">
+                <div class="day-block">
+                    <div class="day-num"><i class="fas fa-calendar"></i> اليوم الأول</div>
+                    <div class="slot">
+                        <div class="slot-time">08:00</div>
+                        <div class="slot-content"><b>الاستقبال والترحيب</b> - استقبالك في المطار والتوجه للفندق</div>
+                    </div>
+                    <div class="slot">
+                        <div class="slot-time">13:00</div>
+                        <div class="slot-content"><b>الغداء</b> - وجبة غداء محلية شهية</div>
+                    </div>
+                    <div class="slot">
+                        <div class="slot-time">15:00</div>
+                        <div class="slot-content"><b>جولة استكشافية</b> - التعرف على المدينة</div>
+                    </div>
+                </div>
+                <div class="day-block">
+                    <div class="day-num"><i class="fas fa-mountain"></i> اليوم الثاني</div>
+                    <div class="slot">
+                        <div class="slot-time">07:00</div>
+                        <div class="slot-content"><b>رحلة المشي</b> - صعود الجبال والاستمتاع بالطبيعة</div>
+                    </div>
+                    <div class="slot">
+                        <div class="slot-time">12:00</div>
+                        <div class="slot-content"><b>الغداء في الطبيعة</b> - وجبة خفيفة صحية</div>
+                    </div>
+                    <div class="slot">
+                        <div class="slot-time">18:00</div>
+                        <div class="slot-content"><b>حفلة شعبية</b> - تجربة الثقافة المحلية</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" style="margin-top: 4rem;">
+            <div class="section-header">
+                <span class="section-tag">الأسعار</span>
+                <h2>حزم الرحلات</h2>
+                <p>اختر الحزمة التي تناسب احتياجاتك</p>
+            </div>
+            <div class="info-grid">
+                <div class="card-dark">
+                    <h3>🌿 الحزمة الأساسية</h3>
+                    <span class="price-display">99<sup>$</sup></span>
+                    <p>رحلة ليومين شاملة الإقامة والطعام</p>
+                    <ul class="specs-list">
+                        <li><b>إقامة</b> في فندق ثلاث نجوم</li>
+                        <li><b>وجبات</b> صباحية وغداء وعشاء</li>
+                        <li><b>جولات</b> استكشافية موجهة</li>
+                        <li><b>تأمين</b> السفر الأساسي</li>
+                    </ul>
+                </div>
+                <div class="card-light">
+                    <h3>✨ الحزمة الفاخرة</h3>
+                    <ul class="specs-list">
+                        <li><b>إقامة</b> في منتجع فاخر 5 نجوم</li>
+                        <li><b>وجبات</b> طبخ شيف متخصص</li>
+                        <li><b>توصيل</b> خاص بسيارة مريحة</li>
+                        <li><b>أنشطة</b> إضافية اختيارية</li>
+                        <li><b>مرافق</b> شخصي للرحلة</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section style="margin-top: 4rem;">
+            <div class="section-header">
+                <span class="section-tag">المجتمع</span>
+                <h2>انضم إلى أسرتنا</h2>
+                <p>كن جزءاً من مجتمع السياحة المستدامة</p>
+            </div>
+            <div class="community-grid">
+                <div class="community-card">
+                    <h3><i class="fas fa-users"></i> المسافرون</h3>
+                    <p>انضم إلى آلاف المسافرين الذين اختاروا أُفق لرحلاتهم المميزة</p>
+                </div>
+                <div class="community-card">
+                    <h3><i class="fas fa-handshake"></i> الشركاء</h3>
+                    <p>تعاون مع نا وكن جزءاً من شبكتنا العالمية للسياحة المسؤولة</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Section -->
+        <section class="app-section">
+            <div class="section-header">
+                <span class="section-tag">التطبيق</span>
+                <h2>حمّل تطبيقنا</h2>
+                <p>حمّل تطبيق أُفق واستمتع برحلات أفضل</p>
+            </div>
+            <div class="app-mockup">
+                <div class="app-content">
+                    <div class="app-icon">📱</div>
+                    <h3>تطبيق أُفق</h3>
+                    <ul class="app-features">
+                        <li><i class="fas fa-check-circle"></i> حجز سهل وسريع</li>
+                        <li><i class="fas fa-check-circle"></i> متابعة الرحلة فوراً</li>
+                        <li><i class="fas fa-check-circle"></i> عروض حصرية</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
-    <div class="stat-item">
-        <div class="stat-num">3<span>+</span></div>
-        <div class="stat-label">معالم سياحية</div>
-    </div>
-    <div class="stat-item">
-        <div class="stat-num">10<span>أشخاص</span></div>
-        <div class="stat-label">الحد الأقصى</div>
-    </div>
-    <div class="stat-item">
-        <div class="stat-num">3K<span>ل.س</span></div>
-        <div class="stat-label">سعر الفرد</div>
-    </div>
-</div>
 
-<!-- MAIN WRAPPER -->
-<main class="wrapper">
-
-    <!-- ITINERARY SECTION -->
-    <section id="itinerary" aria-labelledby="itinerary-heading">
-        <div class="section-header reveal">
-            <div class="section-tag">المسار الزمني</div>
-            <h2 id="itinerary-heading">البرنامج الكامل للرحلة</h2>
-            <p>عطلة نهاية أسبوع مليئة بالمغامرة والطبيعة الساحرة</p>
-        </div>
-
-        <div class="itinerary">
-
-            <!-- DAY 1 -->
-            <div class="day-block reveal">
-                <span class="day-num">
-                    <i class="fas fa-mountain" aria-hidden="true"></i>
-                    اليوم الأول: من عبق التاريخ إلى أحضان الطبيعة (الناصرة – سد المزينة)
-                </span>
-                <div class="slot">
-                    <div class="slot-time">09:00 ص</div>
-                    <div class="slot-content">
-                        <b>نقطة الانطلاق (الناصرة):</b> استنشق هواء الجبال النقي في بلدة الناصرة الساحرة. معايرة الدراجات وتوزيع خريطة «أُفق» التفاعلية.
-                        <i class="fas fa-check-circle" style="color:var(--success);margin-right:5px" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="slot">
-                    <div class="slot-time">11:00 ص</div>
-                    <div class="slot-content">
-                        <b>عبر الزمن (قلعة الحصن):</b> قيادة مشوّقة نحو واحدة من أعظم قلاع العالم. جولة استكشافية بين الأبراج والأقبية.
-                        <i class="fas fa-chess-rook" style="color:var(--gold);margin-right:5px" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="slot">
-                    <div class="slot-time">02:30 ظ</div>
-                    <div class="slot-content">
-                        <b>تذوق الأصالة:</b> غداء ريفي فاخر من أشهى المأكولات المحلية في مطعم يطل على بانوراما وادي النصارى.
-                        <i class="fas fa-utensils" style="color:var(--warning);margin-right:5px" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="slot">
-                    <div class="slot-time">05:30 م</div>
-                    <div class="slot-content">
-                        <b>سكون البحيرة (سد المزينة):</b> التخييم على ضفاف البحيرة مع صيد السمك وتأمل النجوم.
-                        <i class="fas fa-campground" style="color:var(--success);margin-right:5px" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
-
-            <!-- DAY 2 -->
-            <div class="day-block reveal">
-                <span class="day-num" style="background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--primary-dark)">
-                    <i class="fas fa-water" aria-hidden="true"></i>
-                    اليوم الثاني: أسرار الأرض والنزول الذهبي نحو الساحل
-                </span>
-                <div class="slot">
-                    <div class="slot-time">08:30 ص</div>
-                    <div class="slot-content">
-                        <b>إفطار المزرعة:</b> إفطار قروي طازج من خيرات الأرض السورية لتبدأ يومك بطاقة عالية.
-                        <i class="fas fa-sun" style="color:var(--warning);margin-right:5px" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="slot">
-                    <div class="slot-time">10:30 ص</div>
-                    <div class="slot-content">
-                        <b>عجائب الطبيعة (مشتى الحلو ومغارة الضوايات):</b> استكشاف الصواعد والنوازل الساحرة داخل المغارة.
-                        <i class="fas fa-mountain-city" style="color:var(--gold);margin-right:5px" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="slot">
-                    <div class="slot-time">03:00 ظ</div>
-                    <div class="slot-content">
-                        <b>النزول الذهبي (باتجاه طرطوس):</b> انسياب حر بالدراجات من الجبال نحو الساحل مع مشهد غروب يعانق البحر المتوسط.
-                        <i class="fas fa-bicycle" style="color:var(--success);margin-right:5px" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="slot">
-                    <div class="slot-time">06:00 م</div>
-                    <div class="slot-content">
-                        <b>ختام المغامرة (شاطئ طرطوس):</b> السباحة الختامية وتوزيع الميداليات التذكارية ومشاركة الصور.
-                        <i class="fas fa-trophy" style="color:var(--gold);margin-right:5px" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- INFO CARDS -->
-        <div class="info-grid reveal">
-            <div class="card-dark">
-                <h3><i class="fas fa-tag" aria-hidden="true"></i> التكلفة الكلية للرحلة</h3>
-                <span class="price-display">3000 <sup>ل.س</sup></span>
-                <p>باقة Luxury-Eco شاملة: استئجار الدراجة، سيارة الدعم، كافة الوجبات، والمبيت الريفي.</p>
-            </div>
-            <div class="card-light">
-                <h3><i class="fas fa-cogs" aria-hidden="true"></i> الخدمات اللوجستية والدعم</h3>
-                <ul class="specs-list" aria-label="قائمة الخدمات">
-                    <li><b>الدعم:</b> سيارة دفع رباعي لنقل الأمتعة والمؤن</li>
-                    <li><b>الصيانة:</b> ميكانيكي دراجات محترف بقطع غيار كاملة</li>
-                    <li><b>التوثيق:</b> تصوير درون فوتوغرافي وفيديو طوال المسار</li>
-                    <li><b>التأمين:</b> تأمين شامل على المشاركين والدراجات</li>
-                    <li><b>الإرشاد:</b> مرشد سياحي يتقن العربية والإنجليزية</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- COMMUNITY SECTION -->
-    <section id="community" style="margin-top:4rem" aria-labelledby="community-heading">
-        <div class="section-header reveal">
-            <div class="section-tag">المجتمع</div>
-            <h2 id="community-heading">مجتمع أُفق الرياضي</h2>
-            <p>نصنع أبطالاً ونحيي الثقافة ونروّج سياحتنا بروح تنافسية</p>
-        </div>
-
-        <div class="community-grid">
-            <div class="community-card reveal">
-                <h3><i class="fas fa-flag-checkered"></i> كرنفال أُفق الشهري</h3>
-                <p>مهرجان شهري يجمع العائلات والمحترفين في مسارات آمنة داخل المدن السورية الكبرى.</p>
-                <ul class="specs-list">
-                    <li><b>سباقات التحدي:</b> فئات عمرية مختلفة مع جوائز قيمة</li>
-                    <li><b>بازار محلي:</b> فرصة للحرفيين لبيع منتجاتهم</li>
-                    <li><b>ترويج مبتكر:</b> كل شهر في معلم سياحي مختلف</li>
-                </ul>
-            </div>
-            <div class="community-card reveal" style="animation-delay:0.15s">
-                <h3><i class="fas fa-medal" style="color:var(--success)"></i> أكاديمية أُفق للاحتراف</h3>
-                <p>نهدف لتخريج متسابقين يمثلون سورية في المحافل الدولية لسباقات الدراجات.</p>
-                <ul class="specs-list">
-                    <li><b>تدريب متخصص:</b> معسكرات بإشراف أبطال محليين ودوليين</li>
-                    <li><b>تطوير القدرات:</b> برامج غذائية وتكتيكات سباقات الجبال</li>
-                    <li><b>رعاية المواهب:</b> دعم لوجستي ومادي لأفضل الدراجين</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- APP SECTION -->
-    <section id="app-map" class="app-section reveal" aria-labelledby="app-heading">
-        <div class="section-header">
-            <div class="section-tag">التطبيق</div>
-            <h2 id="app-heading"><i class="fas fa-map-marked-alt" aria-hidden="true"></i> خريطة أُفق التفاعلية</h2>
-            <p>تتبع مسارك واكتشف المعالم عبر تطبيقنا الذكي</p>
-        </div>
-        <div class="app-mockup" role="img" aria-label="صورة تطبيق أُفق">
-            <div class="app-content">
-                <div class="app-icon" aria-hidden="true"><i class="fas fa-mobile-alt"></i></div>
-                <h3>قريباً على تطبيق أُفق</h3>
-                <ul class="app-features" aria-label="ميزات التطبيق">
-                    <li><i class="fas fa-check" aria-hidden="true"></i> تتبع حي GPS لكامل المسار لضمان الأمان</li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i> إشعارات ذكية عند المرور بمعالم تاريخية</li>
-                    <li><i class="fas fa-check" aria-hidden="true"></i> قياس الارتفاعات والسعرات والسرعة</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- BOOKING SECTION -->
-    <section id="booking" class="booking-section" aria-labelledby="booking-heading">
+    <!-- Booking Form Section -->
+    <section class="booking-section" id="booking">
         <div class="booking-container">
             <div class="booking-header">
-                <h2 id="booking-heading"><i class="fas fa-clipboard-list" aria-hidden="true"></i> احجز مقعدك الآن</h2>
-                <p>انضم إلى أول رحلة دراجات هوائية مستدامة في سورية</p>
+                <h2>احجز رحلتك الآن</h2>
+                <p>ملء البيانات التالية وسنؤكد حجزك خلال 24 ساعة</p>
             </div>
-
             <div class="booking-body">
-                <form id="bookingForm" novalidate aria-label="نموذج الحجز">
-
+                <form id="bookingForm">
+                    <!-- Personal Information -->
                     <div class="form-section">
                         <div class="form-section-title">
-                            <i class="fas fa-user-circle" aria-hidden="true"></i> معلومات المتقدم
+                            <i class="fas fa-user"></i> معلوماتك الشخصية
                         </div>
-
-                        <div class="form-group">
-                            <label for="fullName">الاسم الكامل <span aria-hidden="true">*</span></label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-user input-icon" aria-hidden="true"></i>
-                                <input type="text" id="fullName" name="fullName"
-                                    placeholder="أدخل اسمك الكامل"
-                                    required minlength="3" autocomplete="name">
-                            </div>
-                            <div class="field-error" id="fullName-error" role="alert">الرجاء إدخال الاسم الكامل (3 أحرف على الأقل)</div>
-                        </div>
-
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="email">البريد الإلكتروني <span aria-hidden="true">*</span></label>
+                                <label for="fullName">الاسم الكامل</label>
                                 <div class="input-wrapper">
-                                    <i class="fas fa-envelope input-icon" aria-hidden="true"></i>
-                                    <input type="email" id="email" name="email"
-                                        placeholder="your@email.com"
-                                        required autocomplete="email">
+                                    <input type="text" id="fullName" name="fullName" placeholder="أدخل اسمك" required>
+                                    <span class="input-icon"><i class="fas fa-user-circle"></i></span>
                                 </div>
-                                <div class="field-error" id="email-error" role="alert">الرجاء إدخال بريد إلكتروني صحيح</div>
+                                <div class="field-error"></div>
                             </div>
-
                             <div class="form-group">
-                                <label for="phone">رقم الهاتف <span aria-hidden="true">*</span></label>
+                                <label for="email">البريد الإلكتروني</label>
                                 <div class="input-wrapper">
-                                    <i class="fas fa-phone input-icon" aria-hidden="true"></i>
-                                    <input type="tel" id="phone" name="phone"
-                                        placeholder="+963-9xxxxxxxx"
-                                        required pattern="[\+]?[0-9\s\-]{7,15}"
-                                        autocomplete="tel">
+                                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                                    <span class="input-icon"><i class="fas fa-envelope"></i></span>
                                 </div>
-                                <div class="field-error" id="phone-error" role="alert">الرجاء إدخال رقم هاتف صحيح</div>
+                                <div class="field-error"></div>
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="province">المحافظة <span aria-hidden="true">*</span></label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-map-marker-alt input-icon" aria-hidden="true"></i>
-                                <select id="province" name="province" required>
-                                    <option value="">اختر المحافظة</option>
-                                    <option value="حمص">حمص</option>
-                                    <option value="دمشق">دمشق</option>
-                                    <option value="ريف دمشق">ريف دمشق</option>
-                                    <option value="اللاذقية">اللاذقية</option>
-                                    <option value="حماة">حماة</option>
-                                    <option value="طرطوس">طرطوس</option>
-                                    <option value="درعا">درعا</option>
-                                    <option value="السويداء">السويداء</option>
-                                    <option value="حلب">حلب</option>
-                                    <option value="أخرى">أخرى</option>
-                                </select>
-                            </div>
-                            <div class="field-error" id="province-error" role="alert">الرجاء اختيار المحافظة</div>
-                        </div>
-                    </div>
-
-                    <div class="form-section">
-                        <div class="form-section-title">
-                            <i class="fas fa-route" aria-hidden="true"></i> تفاصيل الرحلة
-                        </div>
-
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="date">تاريخ الرحلة <span aria-hidden="true">*</span></label>
+                                <label for="phone">رقم الهاتف</label>
                                 <div class="input-wrapper">
-                                    <i class="fas fa-calendar-days input-icon" aria-hidden="true"></i>
-                                    <select id="date" name="date" required onchange="updatePrice()">
-                                        <option value="">اختر تاريخاً</option>
-                                        <option value="2026-06-15">15 يونيو 2026</option>
-                                        <option value="2026-07-01">01 يوليو 2026</option>
-                                        <option value="2026-07-15">15 يوليو 2026</option>
-                                        <option value="2026-08-01">01 أغسطس 2026</option>
-                                        <option value="2026-08-20">20 أغسطس 2026</option>
+                                    <input type="tel" id="phone" name="phone" placeholder="+966..." required>
+                                    <span class="input-icon"><i class="fas fa-phone"></i></span>
+                                </div>
+                                <div class="field-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">الدولة</label>
+                                <div class="input-wrapper">
+                                    <select id="country" name="country" required>
+                                        <option value="">اختر دولتك</option>
+                                        <option value="sa">المملكة العربية السعودية</option>
+                                        <option value="ae">الإمارات العربية المتحدة</option>
+                                        <option value="kw">الكويت</option>
+                                        <option value="other">أخرى</option>
                                     </select>
+                                    <span class="input-icon"><i class="fas fa-globe"></i></span>
                                 </div>
-                                <div class="field-error" id="date-error" role="alert">الرجاء اختيار تاريخ</div>
+                                <div class="field-error"></div>
                             </div>
+                        </div>
+                    </div>
 
+                    <!-- Trip Information -->
+                    <div class="form-section">
+                        <div class="form-section-title">
+                            <i class="fas fa-suitcase-rolling"></i> معلومات الرحلة
+                        </div>
+                        <div class="form-row">
                             <div class="form-group">
-                                <label for="participants">عدد المشاركين <span aria-hidden="true">*</span></label>
+                                <label for="tripType">نوع الرحلة</label>
                                 <div class="input-wrapper">
-                                    <i class="fas fa-users input-icon" aria-hidden="true"></i>
-                                    <input type="number" id="participants" name="participants"
-                                        min="1" max="10" value="1" required
-                                        onchange="updatePrice()" oninput="updatePrice()">
+                                    <select id="tripType" name="tripType" required>
+                                        <option value="">اختر نوع الرحلة</option>
+                                        <option value="basic">الحزمة الأساسية (99$)</option>
+                                        <option value="luxury">الحزمة الفاخرة (299$)</option>
+                                    </select>
+                                    <span class="input-icon"><i class="fas fa-list"></i></span>
                                 </div>
-                                <div class="field-error" id="participants-error" role="alert">العدد بين 1 و 10 أشخاص</div>
+                                <div class="field-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="startDate">تاريخ الرحلة</label>
+                                <div class="input-wrapper">
+                                    <input type="date" id="startDate" name="startDate" required>
+                                    <span class="input-icon"><i class="fas fa-calendar"></i></span>
+                                </div>
+                                <div class="field-error"></div>
                             </div>
                         </div>
-
                         <div class="form-group">
-                            <label for="notes">ملاحظات إضافية</label>
-                            <textarea id="notes" name="notes"
-                                placeholder="أي متطلبات خاصة أو معلومات تودّ مشاركتها؟"
-                                maxlength="500"></textarea>
+                            <label for="participants">عدد المشاركين</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="participants" name="participants" min="1" max="10" placeholder="1" required>
+                                <span class="input-icon"><i class="fas fa-users"></i></span>
+                            </div>
+                            <div class="field-error"></div>
                         </div>
                     </div>
 
-                    <!-- PRICE SUMMARY -->
-                    <div class="price-summary" role="region" aria-label="ملخص السعر" aria-live="polite">
-                        <div class="price-row">
-<div class="price-row">
-                            <span><i class="fas fa-user-check" aria-hidden="true"></i> السعر لكل شخص:</span>
-                            <strong id="pricePerPerson">3,000 ل.س</strong>
+                    <!-- Special Requests -->
+                    <div class="form-section">
+                        <div class="form-section-title">
+                            <i class="fas fa-message"></i> طلبات خاصة
                         </div>
-                        <div class="price-row">
-                            <span><i class="fas fa-people-group" aria-hidden="true"></i> عدد المشاركين:</span>
-                            <strong id="participantsDisplay">1</strong>
-                        </div>
-                        <div class="price-row">
-                            <span><i class="fas fa-calculator" aria-hidden="true"></i> الإجمالي:</span>
-                            <strong id="totalPrice">3,000 ل.س</strong>
+                        <div class="form-group">
+                            <label for="requests">ملاحظات أو متطلبات خاصة</label>
+                            <textarea id="requests" name="requests" placeholder="أخبرنا إن كان لديك متطلبات خاصة..."></textarea>
+                            <div class="field-error"></div>
                         </div>
                     </div>
 
-                    <!-- TERMS -->
+                    <!-- Price Summary -->
+                    <div class="price-summary">
+                        <div class="price-row">
+                            <span>السعر الأساسي:</span>
+                            <span><strong id="basePrice">99</strong>$</span>
+                        </div>
+                        <div class="price-row">
+                            <span>عدد المشاركين:</span>
+                            <span>x<strong id="participantCount">1</strong></span>
+                        </div>
+                        <div class="price-row">
+                            <span>الرسوم الإدارية:</span>
+                            <span id="adminFee">0<i class="fas fa-info-circle"></i></span>
+                        </div>
+                        <div class="price-row">
+                            <span>الإجمالي:</span>
+                            <strong id="totalPrice">99$</strong>
+                        </div>
+                    </div>
+
+                    <!-- Terms -->
                     <div class="terms-box">
                         <input type="checkbox" id="terms" name="terms" required>
                         <label for="terms">
-                            أوافق على
-                            <a href="#" onclick="showTermsModal(event)">الشروط والأحكام</a>
-                            وسياسة الخصوصية الخاصة بمشروع أُفق
+                            أوافق على <a href="#">شروط الاستخدام</a> و<a href="#">سياسة الخصوصية</a>
                         </label>
                     </div>
 
+                    <!-- Submit Button -->
                     <button type="submit" class="submit-btn">
-                        <i class="fas fa-check-circle" aria-hidden="true"></i>
-                        تأكيد الحجز
+                        <i class="fas fa-lock"></i> تأكيد الحجز الآن
                     </button>
                 </form>
             </div>
         </div>
     </section>
 
-</main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <i class="fas fa-leaf"></i> أُفق
+        </div>
+        <p>منصة السياحة المستدامة</p>
+        <p>نحن ملتزمون بـ <b>السياحة المسؤولة</b> و<b>الحفاظ على البيئة</b></p>
+        <div class="footer-contact">
+            <i class="fas fa-phone"></i> +966-XX-XXXX-XXXX
+        </div>
+        <div class="footer-social">
+            <a href="#" class="social-btn"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p style="margin-top: 2rem; opacity: 0.7; font-size: 0.9rem;">
+            © 2026 مشروع أُفق | جميع الحقوق محفوظة
+        </p>
+    </footer>
 
-<!-- FOOTER -->
-<footer role="contentinfo">
-    <div class="footer-logo" aria-label="شعار أُفق">
-        <i class="fas fa-compass" aria-hidden="true"></i> أُفق
+    <!-- Toast Notification -->
+    <div id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage"></span>
     </div>
-    <p>إعداد الطالب: <b>يزن ملحم</b> | إشراف الدكتور: <b>مرهف الحمود</b></p>
-    <p style="opacity:0.65">مادة تسويق وترويج سياحي — كلية السياحة — جامعة حمص 2026</p>
-    <div class="footer-contact">
-        <i class="fas fa-phone-volume" aria-hidden="true"></i>
-        <a href="tel:+963993491044" style="color:var(--gold);text-decoration:none">‎+963 993 491 044</a>
-    </div>
-    <nav class="footer-social" aria-label="روابط التواصل الاجتماعي">
-        <a href="#" class="social-btn" aria-label="فيسبوك"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-        <a href="#" class="social-btn" aria-label="انستغرام"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-        <a href="#" class="social-btn" aria-label="تويتر/إكس"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
-        <a href="#" class="social-btn" aria-label="واتساب"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-    </nav>
-</footer>
 
-<!-- TOAST NOTIFICATION -->
-<div id="toast" role="status" aria-live="polite">
-    <i class="fas fa-check-circle" aria-hidden="true"></i>
-    <span id="toastMsg">تم تنفيذ العملية بنجاح</span>
-</div>
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" title="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-<!-- SCROLL TO TOP -->
-<button id="scrollTop" aria-label="العودة للأعلى" title="العودة للأعلى">
-    <i class="fas fa-chevron-up" aria-hidden="true"></i>
-</button>
+    <!-- JavaScript -->
+    <script>
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
 
-<script>
-'use strict';
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+        });
 
-/* ====== MOBILE NAV ====== */
-const menuIcon = document.getElementById('menuIcon');
-const navMenu  = document.getElementById('navMenu');
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
-menuIcon.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('open');
-    menuIcon.setAttribute('aria-expanded', isOpen);
-    menuIcon.querySelector('i').className = isOpen ? 'fas fa-times' : 'fas fa-bars';
-});
-
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-        menuIcon.setAttribute('aria-expanded', 'false');
-        menuIcon.querySelector('i').className = 'fas fa-bars';
-    });
-});
-
-/* ====== ACTIVE NAV ON SCROLL ====== */
-const sections = document.querySelectorAll('section[id], header[id]');
-const navLinks  = document.querySelectorAll('.nav-link');
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            navLinks.forEach(l => l.classList.remove('active'));
-            const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-            if (active) active.classList.add('active');
+        // Show Toast Notification
+        function showToast(message, duration = 3000) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMessage').textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), duration);
         }
-    });
-}, { threshold: 0.35 });
 
-sections.forEach(s => observer.observe(s));
+        // Booking Form Handler
+        const bookingForm = document.getElementById('bookingForm');
+        const participantsInput = document.getElementById('participants');
+        const tripTypeSelect = document.getElementById('tripType');
 
-/* ====== SCROLL TO TOP ====== */
-const scrollTopBtn = document.getElementById('scrollTop');
-window.addEventListener('scroll', () => {
-    scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
-}, { passive: true });
+        // Update Price Summary
+        function updatePriceSummary() {
+            const tripType = tripTypeSelect.value || 'basic';
+            const participants = parseInt(participantsInput.value) || 1;
+            
+            const prices = { basic: 99, luxury: 299 };
+            const basePrice = prices[tripType] || 99;
+            const adminFee = Math.round(basePrice * 0.1);
+            const totalPrice = (basePrice + adminFee) * participants;
 
-scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-/* ====== REVEAL ANIMATION ====== */
-const revealObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            revealObserver.unobserve(entry.target);
+            document.getElementById('basePrice').textContent = basePrice;
+            document.getElementById('participantCount').textContent = participants;
+            document.getElementById('adminFee').textContent = adminFee;
+            document.getElementById('totalPrice').textContent = totalPrice + '$';
         }
-    });
-}, { threshold: 0.12 });
 
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        tripTypeSelect.addEventListener('change', updatePriceSummary);
+        participantsInput.addEventListener('change', updatePriceSummary);
+        participantsInput.addEventListener('input', updatePriceSummary);
 
-/* ====== PRICE CALCULATOR ====== */
-function updatePrice() {
-    const raw = parseInt(document.getElementById('participants').value, 10);
-    const participants = isNaN(raw) || raw < 1 ? 1 : raw > 10 ? 10 : raw;
-    const pricePerPerson = 3000;
-    const total = pricePerPerson * participants;
-
-    document.getElementById('participantsDisplay').textContent = participants;
-    document.getElementById('pricePerPerson').textContent = pricePerPerson.toLocaleString('ar-SA') + ' ل.س';
-    document.getElementById('totalPrice').textContent = total.toLocaleString('ar-SA') + ' ل.س';
-}
-
-/* ====== TOAST ====== */
-function showToast(msg, duration = 3500) {
-    const toast = document.getElementById('toast');
-    document.getElementById('toastMsg').textContent = msg;
-    toast.classList.add('show');
-    clearTimeout(toast._timer);
-    toast._timer = setTimeout(() => toast.classList.remove('show'), duration);
-}
-
-/* ====== FORM VALIDATION ====== */
-function validateField(input) {
-    const id = input.id;
-    const errEl = document.getElementById(id + '-error');
-    if (!errEl) return true;
-
-    let valid = true;
-
-    if (input.type === 'email') {
-        valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
-    } else if (input.type === 'tel') {
-        valid = /^[\+]?[0-9\s\-]{7,15}$/.test(input.value.trim());
-    } else if (input.type === 'number') {
-        const v = parseInt(input.value, 10);
-        valid = !isNaN(v) && v >= 1 && v <= 10;
-    } else if (input.tagName === 'SELECT') {
-        valid = input.value !== '';
-    } else {
-        valid = input.value.trim().length >= (parseInt(input.getAttribute('minlength')) || 1);
-    }
-
-    errEl.classList.toggle('visible', !valid);
-    input.setAttribute('aria-invalid', !valid);
-    return valid;
-}
-
-document.querySelectorAll('#bookingForm input, #bookingForm select, #bookingForm textarea').forEach(field => {
-    field.addEventListener('blur', () => validateField(field));
-    field.addEventListener('input', () => {
-        const errEl = document.getElementById(field.id + '-error');
-        if (errEl) errEl.classList.remove('visible');
-    });
-});
-
-/* ====== BOOKING SUBMISSION ====== */
-document.getElementById('bookingForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    // Validate all fields
-    const fields = this.querySelectorAll('input[required], select[required]');
-    let allValid = true;
-    fields.forEach(f => { if (!validateField(f)) allValid = false; });
-
-    if (!allValid) {
-        showToast('⚠️ يرجى تصحيح الأخطاء في النموذج');
-        return;
-    }
-
-    if (!document.getElementById('terms').checked) {
-        showToast('⚠️ يرجى قبول الشروط والأحكام أولاً');
-        return;
-    }
-
-    const booking = {
-        id: 'BK-' + Date.now(),
-        fullName:     document.getElementById('fullName').value.trim(),
-        email:        document.getElementById('email').value.trim(),
-        phone:        document.getElementById('phone').value.trim(),
-        province:     document.getElementById('province').value,
-        date:         document.getElementById('date').value,
-        participants: document.getElementById('participants').value,
-        notes:        document.getElementById('notes').value.trim(),
-        totalPrice:   document.getElementById('totalPrice').textContent,
-        createdAt:    new Date().toISOString(),
-        status:       'قيد الانتظار'
-    };
-
-    try {
-        const bookings = JSON.parse(localStorage.getItem('afq_bookings') || '[]');
-        bookings.push(booking);
-        localStorage.setItem('afq_bookings', JSON.stringify(bookings));
-    } catch(err) {
-        console.warn('localStorage غير متاح:', err);
-    }
-
-    showToast('✅ تم استقبال حجزك! سنتواصل معك قريباً على ' + booking.email, 5000);
-    this.reset();
-    updatePrice();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-/* ====== TERMS MODAL ====== */
-function showTermsModal(e) {
-    e.preventDefault();
-    const msg = `الشروط والأحكام — مشروع أُفق\n\n` +
-        `• الحجز مؤكد عند استلام المبلغ كاملاً.\n` +
-        `• الإلغاء قبل 7 أيام يُعيد 70% من المبلغ.\n` +
-        `• المشاركون مسؤولون عن لياقتهم البدنية.\n` +
-        `• تأمين شامل مدرج في سعر الباقة.\n` +
-        `• الحد الأدنى للعمر: 16 سنة.\n\n` +
-        `للاستفسار: +963 993 491 044`;
-    alert(msg);
-}
-
-/* ====== SMOOTH SCROLL POLYFILL FOR INTERNAL LINKS ====== */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href === '#') return;
-        const target = document.querySelector(href);
-        if (target) {
+        // Form Submission
+        bookingForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    });
-});
 
-/* ====== INIT ====== */
-document.addEventListener('DOMContentLoaded', updatePrice);
-</script>
+            // Validation
+            let isValid = true;
+            const requiredFields = this.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                if (!field.value) {
+                    isValid = false;
+                    field.classList.add('invalid');
+                } else {
+                    field.classList.remove('invalid');
+                }
+            });
 
+            if (!isValid) {
+                showToast('⚠️ يرجى ملء جميع الحقول المطلوبة', 4000);
+                return;
+            }
+
+            // Simulate Form Submission
+            showToast('✅ تم استقبال حجزك بنجاح! سنتواصل معك قريباً', 5000);
+            
+            // Reset Form
+            setTimeout(() => {
+                this.reset();
+                updatePriceSummary();
+            }, 1500);
+        });
+
+        // Initialize Price Summary on Page Load
+        updatePriceSummary();
+    </script>
 </body>
-  </html>
-
-                  
+</html>
